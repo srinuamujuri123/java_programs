@@ -11,7 +11,7 @@ public class Test7 {
 		numberOne -= numberTwo;
 		System.out.println("After swapping numberone value is " + numberOne);
 		System.out.println("After swapping numbertwo value is " + numberTwo);
-		
+
 		System.out.println("---with 3rd variable---");
 		int numberThree = numberOne;
 		System.out.println("Before swapping numberone value is " + numberOne);
@@ -20,6 +20,5 @@ public class Test7 {
 		numberTwo = numberThree;
 		System.out.println("After swapping numberone value is " + numberOne);
 		System.out.println("After swapping numbertwo value is " + numberTwo);
-		
 	}
 }
