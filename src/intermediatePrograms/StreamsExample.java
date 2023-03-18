@@ -24,11 +24,11 @@ public class StreamsExample {
 
 	static void lenghtcount() {
 		List<String> names = new ArrayList<>();
-		names.add("srinu");
-		names.add("satyaveni");
+		names.add("srinivasu");
+		names.add("Avijaya");
 		names.add("sajid");
 		long count = names.stream().filter(eachName -> eachName.length() > 6).count();
-		System.out.println("lenghtcount: " + count);
+		System.out.println("lenghtcount >6 string count is: " + count);
 	}
 
 	static void avoidNullInList() {
