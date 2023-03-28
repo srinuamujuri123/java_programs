@@ -27,6 +27,9 @@ public class StreamsExample {
 		names.add("srinivasu");
 		names.add("Avijaya");
 		names.add("sajid");
+		names.add("sajid");
+		names.add("srinu");
+		
 		long count = names.stream().filter(eachName -> eachName.length() > 6).count();
 		System.out.println("lenghtcount >6 string count is: " + count);
 	}
@@ -82,7 +85,12 @@ public class StreamsExample {
 
 	static void searchTermByPassingParameterReturnElementsIfFound() {
 		List<String> elements = sampleList.stream().filter(Objects::nonNull)
-				.filter(name -> name.equalsIgnoreCase("SPRInGBOOT")).collect(Collectors.toList());
+				.filter(name -> name.equalsIgnoreCase("java") || name.equalsIgnoreCase("spring"))
+				.collect(Collectors.toList());
 		System.out.println("searchTermByPassingParameterReturnElementsIfFound: " + elements);
+		boolean elemnt = sampleList.stream().filter(Objects::nonNull).filter(a -> !a.isBlank())
+				.anyMatch(b -> b.equalsIgnoreCase("spring"));
+		System.out.println(elemnt);
+		// !a.isBlank() is required else it will show return type reversely.
 	}
 }
